@@ -293,7 +293,8 @@ System.out.println(directorioTemporal);
 
 ### Pregunta
 
-¿En qué situaciones podría ser conveniente utilizar un archivo temporal en lugar de un archivo permanente?
+¿En qué situaciones podría ser conveniente utilizar un archivo temporal en lugar de un archivo permanente? Podria servir en caso de que el archivo este siendo
+modificado constantemente o que sea un archivo "desechable", o sea que su unico proposito sea para testear.
 
 
 
