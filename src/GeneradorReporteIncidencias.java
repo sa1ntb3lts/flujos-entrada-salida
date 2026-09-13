@@ -13,6 +13,7 @@ public class GeneradorReporteIncidencias {
         // 4. Mostrar información del archivo
 
         // 5. Crear directorio de salida
+        //
         // 6. Crear Paths para los archivos de salida
 
         int total = 0;
