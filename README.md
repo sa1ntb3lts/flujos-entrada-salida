@@ -141,7 +141,7 @@ FileReader          FileWriter
         └── caracteres ───┘
 ```
 
-**Pregunta de decisión:** ¿qué utilizaría para procesar un archivo `.txt`? ¿Y para copiar un archivo `.jpg`?
+**Pregunta de decisión:** ¿qué utilizaría para procesar un archivo `.txt`? ¿Y para copiar un archivo `.jpg`? Para el .txt seria un FileReader y para .jpg un FileInputStream
 
 
 
