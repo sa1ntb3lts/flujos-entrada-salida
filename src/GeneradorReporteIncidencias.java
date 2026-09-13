@@ -15,8 +15,9 @@ public class GeneradorReporteIncidencias {
         System.out.println("Es archivo: " + Files.isRegularFile(path));
         System.out.println("Se puede leer: " + Files.isReadable(path));
         // 5. Crear directorio de salida
-
+        PrintWriter output = new PrintWriter(new FileWriter("salida/reportes"));
         // 6. Crear Paths para los archivos de salida
+
 
 
         int total = 0;
