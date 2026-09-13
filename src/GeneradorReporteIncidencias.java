@@ -43,7 +43,11 @@ public class GeneradorReporteIncidencias {
             String linea;
 
             while ((linea = lector.readLine()) != null) {
-
+                // 7. Procesar cada incidencia
+                String[] datos = linea.split("\\|");
+                String id = datos[0];
+                String descripcion = datos[1];
+                String prioridad = datos[2];
                 // 8. Clasificar prioridad
                 // 9. Escribir incidencias ALTA
             }
