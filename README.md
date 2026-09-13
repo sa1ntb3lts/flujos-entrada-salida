@@ -96,7 +96,7 @@ public class CopiarBytes {
 ### Preguntas
 
 1. ¿Por qué `read()` devuelve un `int`?
-2. ¿Qué significa `-1`?
+2. ¿Qué significa `-1`? Es lo que devuelve el metodo read al momento de alcanzar el final del archivo de texto.
 3. ¿Qué representa la variable `dato`?
 4. ¿Podría utilizarse este mecanismo para copiar una imagen?
 
@@ -592,4 +592,3 @@ practica-io/
             ├── reporte-incidencias.txt
             └── incidencias-alta.txt
 ```
-
