@@ -17,6 +17,8 @@ public class GeneradorReporteIncidencias {
         if (!Files.exists(path)) {
             return;
         }
+
+        try {
         // 4. Mostrar información del archivo
         System.out.println("Es archivo: " + Files.isRegularFile(path));
         System.out.println("Se puede leer: " + Files.isReadable(path));
@@ -28,36 +30,33 @@ public class GeneradorReporteIncidencias {
         Path pathReporte = Path.of("mesa-ayuda/salida/reportes", "reporte-incidencias.txt");
         Path pathAltas = Path.of("mesa-ayuda/salida/reportes", "incidencias-altas.txt");
 
-
         int total = 0;
         int altas = 0;
         int medias = 0;
         int bajas = 0;
 
-        try (
-            BufferedReader lector = Files.newBufferedReader(path);
-            PrintWriter reporte = new PrintWriter(Files.newBufferedWriter(pathReporte));
-            PrintWriter reporteAltas = new PrintWriter(Files.newBufferedWriter(pathAltas))
-        ) {
+            try (
+                BufferedReader lector = Files.newBufferedReader(path);
+                PrintWriter reporte = new PrintWriter(Files.newBufferedWriter(pathReporte));
+                PrintWriter reporteAltas = new PrintWriter(Files.newBufferedWriter(pathAltas))
+            ) {
 
-            String linea;
+                String linea;
 
-            while ((linea = lector.readLine()) != null) {
-                // 7. Procesar cada incidencia
-                String[] datos = linea.split("\\|");
-                String id = datos[0];
-                String descripcion = datos[1];
-                String prioridad = datos[2];
-                // 8. Clasificar prioridad
-                if (prioridad.contains("ALTA")) {
-                    altas ++;
-                    // 9. Escribir incidencias ALTA
-                    reporteAltas.write(linea);
+                while ((linea = lector.readLine()) != null) {
+                    // 7. Procesar cada incidencia
+                    String[] datos = linea.split("\\|");
+                    String id = datos[0];
+                    String descripcion = datos[1];
+                    String prioridad = datos[2];
+                    // 8. Clasificar prioridad
+                    if (prioridad.contains("ALTA")) {
+                        altas ++;
+                        // 9. Escribir incidencias ALTA
+                        reporteAltas.write(linea);
+                    }
                 }
-            }
-
-            // 10. Generar resumen
-
+            }    // 10. Generar resumen
         } catch (IOException e) {
             System.err.println("Error de E/S: " + e.getMessage());
         }
