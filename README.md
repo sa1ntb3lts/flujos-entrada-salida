@@ -1,3 +1,6 @@
+NOMBRE: Santiago Beltran Astorga
+EXPEDIENTE: 225203551
+
 
 ## 1. Objetivo de aprendizaje
 
