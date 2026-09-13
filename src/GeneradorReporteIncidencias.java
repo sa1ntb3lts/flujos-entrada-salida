@@ -6,15 +6,18 @@ public class GeneradorReporteIncidencias {
     public static void main(String[] args) {
 
         // 1. Validar argumentos
+
         // 2. Crear Path del archivo de entrada
         Path path = Path.of("mesa-ayuda/entrada", "incidencias.txt");
         // 3. Comprobar existencia
         System.out.println("El archivo existe?: " + Files.exists(path));
         // 4. Mostrar información del archivo
-
+        System.out.println("Es archivo: " + Files.isRegularFile(path));
+        System.out.println("Se puede leer: " + Files.isReadable(path));
         // 5. Crear directorio de salida
-        //
+
         // 6. Crear Paths para los archivos de salida
+
 
         int total = 0;
         int altas = 0;
