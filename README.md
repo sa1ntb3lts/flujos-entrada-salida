@@ -95,10 +95,10 @@ public class CopiarBytes {
 
 ### Preguntas
 
-1. ¿Por qué `read()` devuelve un `int`?
+1. ¿Por qué `read()` devuelve un `int`? Porque regresa un byte de informacion o -1.
 2. ¿Qué significa `-1`? Es lo que devuelve el metodo read al momento de alcanzar el final del archivo de texto.
-3. ¿Qué representa la variable `dato`?
-4. ¿Podría utilizarse este mecanismo para copiar una imagen?
+3. ¿Qué representa la variable `dato`? Los bytes que estan siendo leidos y copiados en el nuevo archivo de texto.
+4. ¿Podría utilizarse este mecanismo para copiar una imagen? Si "FileInputStream is meant for reading streams of raw bytes such as image data. For reading streams of characters, consider using FileReader.".
 
 # Parte II. Flujos de caracteres
 
