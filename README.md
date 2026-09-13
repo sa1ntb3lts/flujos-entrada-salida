@@ -322,10 +322,10 @@ reporte?.txt
 
 Indicar qué patrón utilizaría para:
 
-1. Seleccionar todos los archivos Java.
-2. Seleccionar todos los archivos CSV.
-3. Seleccionar `reporte1.txt` a `reporte9.txt`.
-4. Seleccionar archivos que comiencen con `log`.
+1. Seleccionar todos los archivos Java. *.java
+2. Seleccionar todos los archivos CSV. *.csv
+3. Seleccionar `reporte1.txt` a `reporte9.txt`. reporte?.txt
+4. Seleccionar archivos que comiencen con `log`. log.txt o log*
 
 
 
