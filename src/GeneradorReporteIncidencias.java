@@ -49,6 +49,9 @@ public class GeneradorReporteIncidencias {
                 String descripcion = datos[1];
                 String prioridad = datos[2];
                 // 8. Clasificar prioridad
+                if (prioridad.contains("ALTA")) {
+                    altas ++;
+                }
                 // 9. Escribir incidencias ALTA
             }
 
