@@ -51,8 +51,9 @@ public class GeneradorReporteIncidencias {
                 // 8. Clasificar prioridad
                 if (prioridad.contains("ALTA")) {
                     altas ++;
+                    // 9. Escribir incidencias ALTA
+                    reporteAltas.write(linea);
                 }
-                // 9. Escribir incidencias ALTA
             }
 
             // 10. Generar resumen
