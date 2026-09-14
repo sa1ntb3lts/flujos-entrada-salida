@@ -541,24 +541,24 @@ FileOutputStream
 
 ## 20. Preguntas de reflexión
 
-1. ¿Qué es un *stream*?
-2. ¿Cuál es la diferencia entre un *input stream* y un *output stream*?
-3. ¿Cuál es la diferencia entre flujos de bytes y caracteres?
-4. ¿Cuándo utilizaría `FileInputStream` en lugar de `FileReader`?
-5. ¿Qué ventaja proporciona `BufferedReader`?
-6. ¿Qué devuelve `readLine()` cuando termina el archivo?
-7. ¿Por qué los flujos con búfer pueden mejorar el desempeño?
-8. ¿Qué diferencia existe entre una ruta absoluta y una relativa?
-9. ¿Qué representa un objeto `Path`?
-10. ¿Cuál es la responsabilidad de la clase `Files`?
-11. ¿Qué hace `Files.exists()`?
-12. ¿Para qué se utiliza `resolve()`?
-13. ¿Qué ventaja proporciona `Files.createDirectories()`?
-14. ¿Qué es una expresión *glob*?
-15. ¿Qué relación existe entre un `Channel` y un `Buffer` en NIO?
-16. ¿Qué mecanismo utilizaría para procesar un archivo de texto línea por línea?
-17. ¿Qué mecanismo utilizaría para copiar una imagen?
-18. ¿Qué mecanismos de E/S fueron necesarios en el sistema de incidencias?
+1. ¿Qué es un *stream*? Son flujos de bytes utilizados para leer informacion.
+2. ¿Cuál es la diferencia entre un *input stream* y un *output stream*? El input es el que recibe los bytes del archivo, y output es para escribir bytes en un archivo.
+3. ¿Cuál es la diferencia entre flujos de bytes y caracteres? Que los flujos de caracteres decodifican los bytes a caracteres.
+4. ¿Cuándo utilizaría `FileInputStream` en lugar de `FileReader`?  FileInputStream para imagenes y FileReader para archivos de texto.
+5. ¿Qué ventaja proporciona `BufferedReader`? Que es mas eficiente para leer caracteres, arreglos y lineas.
+6. ¿Qué devuelve `readLine()` cuando termina el archivo? -1
+7. ¿Por qué los flujos con búfer pueden mejorar el desempeño? Por el como manejan la memoria.
+8. ¿Qué diferencia existe entre una ruta absoluta y una relativa? Que la ruta absoluta indica todo el path del archivo, la relativa va a depender en que folder estemos nosotros.
+9. ¿Qué representa un objeto `Path`? Representa un directorio en el sistema.
+10. ¿Cuál es la responsabilidad de la clase `Files`? Operar en varios tipos de archivos o en un directorio.
+11. ¿Qué hace `Files.exists()`? Devuelve un booleano cuyo valor dependera si el archivo que se le dio como argumento existe o no.
+12. ¿Para qué se utiliza `resolve()`? Para combinar directorios.
+13. ¿Qué ventaja proporciona `Files.createDirectories()`? Simplifica el proceso de creacion de los directorios.
+14. ¿Qué es una expresión *glob*? Sirve para incluir varios archivos que compartan la misma extension o tipo.
+15. ¿Qué relación existe entre un `Channel` y un `Buffer` en NIO? El canal sirve como intermediario para que el buffer reciba los datos y pueda almacenarlos en memoria.
+16. ¿Qué mecanismo utilizaría para procesar un archivo de texto línea por línea? BufferedReader
+17. ¿Qué mecanismo utilizaría para copiar una imagen? FileInputStream y FileOutputStream
+18. ¿Qué mecanismos de E/S fueron necesarios en el sistema de incidencias? BufferedReader, Path, Files y PrintWriter.
 
 
 
