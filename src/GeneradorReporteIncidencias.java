@@ -54,6 +54,8 @@ public class GeneradorReporteIncidencias {
                         altas ++;
                         // 9. Escribir incidencias ALTA
                         reporteAltas.println(linea);
+                        // 9.1 Imprimir incidencias ALTAS para el reporte
+                        reporte.println(id + " | " + descripcion);
                     } else if (prioridad.contains("MEDIA")) {
                         medias++;
                     } else {
