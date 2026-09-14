@@ -65,11 +65,13 @@ public class GeneradorReporteIncidencias {
                 // 10. Generar resumen
                 reporte.println("REPORTE DE INCIDENCIAS\n" +
                     "======================\n" +
-                    "\nArchivo procesado: " + path +
+                    "\nArchivo procesado: " + path.getFileName() +
                     "\n\nTotal de incidencias: " + total +
-                    "\n\nPriodiad alta: " + altas +
+                    "\n\nPrioridad alta: " + altas +
                     "\nPrioridad media: " + medias +
                     "\nPrioridad baja: " + bajas);
+
+                System.out.println("\n\nINCIDENCIAS DE ALTA PRIORIDAD\n" + reporteAltas);
 
 
             }
