@@ -42,6 +42,7 @@ public class GeneradorReporteIncidencias {
             ) {
 
                 String linea;
+                String incidenciasAltas = "";
 
                 while ((linea = lector.readLine()) != null) {
                     // 7. Procesar cada incidencia
@@ -54,8 +55,8 @@ public class GeneradorReporteIncidencias {
                         altas ++;
                         // 9. Escribir incidencias ALTA
                         reporteAltas.println(linea);
-                        // 9.1 Imprimir incidencias ALTAS para el reporte
-                        reporte.println(id + " | " + descripcion);
+                        // 9.1. Leer id y descripcion
+                        incidenciasAltas += id + " - " + descripcion + "\n";
                     } else if (prioridad.contains("MEDIA")) {
                         medias++;
                     } else {
@@ -68,14 +69,11 @@ public class GeneradorReporteIncidencias {
                 reporte.println("REPORTE DE INCIDENCIAS\n" +
                     "======================\n" +
                     "\nArchivo procesado: " + path.getFileName() +
-                    "\n\nTotal de incidencias: " + total +
-                    "\n\nPrioridad alta: " + altas +
+                    "\nTotal de incidencias: " + total +
+                    "\nPrioridad alta: " + altas +
                     "\nPrioridad media: " + medias +
-                    "\nPrioridad baja: " + bajas);
-
-                System.out.println("\n\nINCIDENCIAS DE ALTA PRIORIDAD\n" + reporteAltas);
-
-
+                    "\nPrioridad baja: " + bajas +
+                    "\n\n\nINCIDENCIAS ALTAS\n\n" + incidenciasAltas);
             }
         } catch (IOException e) {
             System.err.println("Error de E/S: " + e.getMessage());
