@@ -53,10 +53,26 @@ public class GeneradorReporteIncidencias {
                     if (prioridad.contains("ALTA")) {
                         altas ++;
                         // 9. Escribir incidencias ALTA
-                        reporteAltas.write(linea);
+                        reporteAltas.println(linea);
+                    } else if (prioridad.contains("MEDIA")) {
+                        medias++;
+                    } else {
+                        bajas++;
                     }
+
+                    total++;
                 }
-            }    // 10. Generar resumen
+                // 10. Generar resumen
+                reporte.println("REPORTE DE INCIDENCIAS\n" +
+                    "======================\n" +
+                    "\nArchivo procesado: " + path +
+                    "\n\nTotal de incidencias: " + total +
+                    "\n\nPriodiad alta: " + altas +
+                    "\nPrioridad media: " + medias +
+                    "\nPrioridad baja: " + bajas);
+
+
+            }
         } catch (IOException e) {
             System.err.println("Error de E/S: " + e.getMessage());
         }
