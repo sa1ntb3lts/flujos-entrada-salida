@@ -1,0 +1,16 @@
+REPORTE DE INCIDENCIAS
+======================
+
+Archivo procesado: incidencias.txt
+Total de incidencias: 6
+Prioridad alta: 3
+Prioridad media: 2
+Prioridad baja: 1
+
+
+INCIDENCIAS ALTAS
+
+INC-002 - Servidor de correo no responde
+INC-004 - Usuario no puede iniciar sesión
+INC-006 - Falla del servidor de archivos
+
